@@ -1,0 +1,189 @@
+.footer .footer_up {
+  height: 35dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+.footer .footer_up > :nth-child(1) {
+  width: 33%;
+}
+.footer .footer_up > :nth-child(1) .iconBox {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) {
+  display: flex;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) > div {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: rgb(120, 25, 36);
+  display: flex;
+  margin: 0 5px;
+  transition: opacity, scale 0.5s ease-out;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  scale: 1.1;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) > div i {
+  color: #fff;
+  background-color: rgb(120, 25, 36);
+  margin: auto;
+  font-size: 20px;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) {
+  display: flex;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) > div {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: rgb(120, 25, 36);
+  display: flex;
+  margin: 0 5px;
+  transition: opacity, scale 0.5s ease-out;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  scale: 1.1;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) > div i {
+  color: #fff;
+  background-color: rgb(120, 25, 36);
+  margin: auto;
+  font-size: 20px;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) img {
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  margin: auto;
+}
+.footer .footer_up .logo {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+.footer .footer_up .logo img {
+  transition: scale 0.5s ease-out;
+}
+.footer .footer_up .logo img:hover {
+  scale: 0.9;
+  cursor: pointer;
+}
+.footer .footer_up .contact {
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer .footer_up .contact > div {
+  padding: 10px;
+}
+.footer .footer_up .contact > div p {
+  text-align: right;
+  font-size: 1.2rem;
+}
+.footer .shape {
+  display: flex;
+  height: 5dvh;
+}
+.footer .shape > :nth-child(1) {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  border-radius: 0 50% 0 0;
+}
+.footer .shape > :nth-child(2) {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  border-radius: 50% 0 0 0;
+}
+.footer .footer_down {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 40px 40px 40px;
+}
+.footer .footer_down > :nth-child(1) {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid wheat;
+  padding: 20px 50px 50px 50px;
+}
+.footer .footer_down > :nth-child(1) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
+}
+.footer .footer_down > :nth-child(1) > div > div {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+.footer .footer_down > :nth-child(1) > div > div a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .footer_down > :nth-child(2) {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid wheat;
+  padding: 50px 50px 50px 50px;
+}
+.footer .footer_down > :nth-child(2) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
+}
+.footer .footer_down > :nth-child(2) > div > div {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+.footer .footer_down > :nth-child(2) > div > div a {
+  text-decoration: none;
+  color: wheat;
+}
+.footer .footer_down > :nth-child(3) {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px 50px 20px;
+}
+.footer .footer_down > :nth-child(3) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .footer_down > :nth-child(3) > div > div {
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer_down > :nth-child(3) > div > div a {
+  text-decoration: none;
+  color: #fff;
+  margin: 5px 0px;
+}/*# sourceMappingURL=mask_footer.css.map */

@@ -1,0 +1,887 @@
+//------------- variable ----------------------------
+
+$color_of_text: #fff;
+$font_family_Gill_Sans: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+  sans-serif;
+
+//------------- import sass file --------------------
+
+@import 'menu_button';
+@import 'album_grid';
+@import 'mask_footer';
+
+//------------- Animation --------------------
+
+@keyframes menuhidden {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mymove {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0px;
+  }
+}
+@keyframes titleRotate {
+  to {
+    opacity: 1;
+  }
+}
+
+//------------- Global attribute --------------------
+
+* {
+  box-sizing: border-box;
+}
+
+//------------- local attribute -------------------
+@mixin mixing_title_mainBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@mixin background_prop {
+  background-size: 120% 120%;
+  background-position: center;
+  transition: background-size 1s ease-out;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(242, 242, 242);
+  margin-block: 1px;
+  border-radius: 100vw;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(120, 25, 36, 1);
+  border: 1px solid rgb(242, 242, 242);
+  border-radius: 100vw;
+  cursor: grab;
+}
+
+@supports (scrollbar-color: red blue yellow black) {
+  * {
+    scrollbar-color: rgba(120, 25, 36, 1) rgb(49, 44, 44) rgb(218, 178, 106)
+      rgb(49, 44, 44);
+    scrollbar-width: 10px;
+  }
+}
+
+.img {
+  margin-top: 40px;
+  width: 80px;
+}
+.title {
+  margin: 20px 0px 0px 0px;
+  font-size: 2rem;
+  font-family: $font_family_Gill_Sans;
+  letter-spacing: 8px;
+  color: $color_of_text;
+}
+.country {
+  margin-top: 0px;
+  font-size: 1rem;
+  font-family: $font_family_Gill_Sans;
+  letter-spacing: 8px;
+  color: $color_of_text;
+}
+
+//------------------------------------------------------------------------------
+
+body {
+  overflow-x: hidden;
+}
+
+.main_body {
+  width: 100dvw;
+}
+
+.main {
+  width: 100dvw;
+  background-image: url('../image/accueil-salon\ \(1\).jpeg');
+  background-size: 100% 160%;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  background-position: center;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+  }
+}
+
+.shadow {
+  width: 100dvw;
+}
+
+//----------------section header---------------
+
+.header_Home {
+  width: 100dvw;
+  height: 15dvh;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  .slide_Shadow {
+    width: 100%;
+    height: 0dvh;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    position: absolute;
+    transition: all 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+    .title_mainBox {
+      position: absolute;
+      top: -8dvh;
+      opacity: 0;
+      scale: (0.1);
+      transition: all 0.3s ease-out;
+      @include mixing_title_mainBox();
+      @extend .img;
+      @extend .title;
+      @extend .country;
+    }
+  }
+  .slide_Shadow_active {
+    width: 100%;
+    height: 15dvh;
+    background-color: rgba(0, 0, 0, 1);
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    position: absolute;
+    transition: height 0.5s ease-out;
+    .title_mainBox_scolled {
+      position: absolute;
+      top: -8dvh;
+      opacity: 1;
+      scale: (0.5);
+      transition: all 1s ease-out;
+      color: $color_of_text;
+      @include mixing_title_mainBox();
+      @extend .img;
+      @extend .title;
+      @extend .country;
+    }
+  }
+  .header_tab {
+    display: flex;
+    align-items: center;
+    ul {
+      margin: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        list-style: none;
+        padding: 8px;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+      a{
+        text-decoration: none;
+        list-style: none;
+        padding: 8px;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .menu_slide {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.7s ease-out 0.2s;
+    height: 0px;
+    display: flex;
+    > :nth-child(1) {
+      width: 60%;
+      height: 100%;
+      padding: 40px;
+      > :nth-child(1) {
+        position: relative;
+        width: 100%;
+        button {
+          position: absolute;
+          background: none;
+          border: none;
+          box-sizing: border-box;
+          color: transparent;
+          cursor: pointer;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 9px;
+          outline: none;
+          overflow: hidden;
+          text-align: center;
+          text-transform: uppercase;
+          transform: translate(-10%, -10%);
+          transition: all 0.2s ease-in;
+          width: 40px;
+          height: 40px;
+          opacity: 0;
+        }
+        button::before,
+        button::after {
+          background-color: rgb(218, 178, 106);
+          content: '';
+          display: block;
+          height: 3px;
+          left: 0;
+          position: absolute;
+          transform-origin: 1px 2px;
+          transition: all 0.2s ease-in;
+          width: 52px;
+          z-index: -1;
+        }
+        button::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        button::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+        button:hover {
+          color: black;
+        }
+        button:hover::before,
+        button:hover::after {
+          height: 40px;
+          width: 40px;
+          transform: rotate(0deg);
+        }
+        > :nth-child(2) {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          display: none;
+          p {
+            margin: 5px 0px;
+            font-size: 2rem;
+          }
+        }
+      }
+      > :nth-child(2) {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          position: relative;
+          font-size: 3rem;
+          color: rgb(218, 178, 106);
+          opacity: 0;
+          top: 170px;
+          text-decoration: none;
+          p {
+            &:hover {
+              color: rgb(3, 3, 3);
+            }
+          }
+        }
+        > :nth-child(1) {
+          animation: menuhidden 0.2s ease-out 1 forwards;
+        }
+        > :nth-child(2) {
+          animation: menuhidden 0.2s ease-out 1 forwards;
+        }
+        > :nth-child(3) {
+          animation: menuhidden 0.2s ease-out 1 forwards;
+        }
+      }
+    }
+    > :nth-child(2) {
+      width: 40%;
+      background-image: url('../image/accueil-lustre.jpeg');
+      background-attachment: fixed;
+      background-position-x: 200%;
+      background-repeat: no-repeat;
+      background-size: 80% 100%;
+    }
+  }
+  .menu_slide_active {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.5s ease-out;
+    height: 100dvh;
+    display: flex;
+    > :nth-child(1) {
+      width: 60%;
+      height: 100%;
+      padding: 40px;
+      > :nth-child(1) {
+        position: relative;
+        width: 100%;
+        button {
+          position: absolute;
+          background: none;
+          border: none;
+          box-sizing: border-box;
+          color: transparent;
+          cursor: pointer;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 9px;
+          outline: none;
+          overflow: hidden;
+          text-align: center;
+          text-transform: uppercase;
+          transform: translate(-10%, -10%);
+          transition: all 0.2s ease-in;
+          width: 40px;
+          height: 40px;
+          opacity: 0;
+          animation: menu 1s ease-out 0.5s 1 forwards;
+        }
+        button::before,
+        button::after {
+          background-color: rgb(218, 178, 106);
+          content: '';
+          display: block;
+          height: 3px;
+          left: 0;
+          position: absolute;
+          transform-origin: 1px 2px;
+          transition: all 0.2s ease-in;
+          width: 52px;
+          z-index: -1;
+        }
+        button::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        button::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+        button:hover {
+          color: black;
+        }
+        button:hover::before,
+        button:hover::after {
+          height: 40px;
+          width: 40px;
+          transform: rotate(0deg);
+        }
+        > :nth-child(2) {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          p {
+            margin: 5px 0px;
+            font-size: 2rem;
+            grid-row: 1;
+            grid-column: 2;
+            margin-left: -2rem;
+            animation: image-in 1.5s cubic-bezier(0.5, 0, 0.1, 1) 0.2s backwards;
+            @keyframes image-in {
+              from {
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+              }
+              to {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              }
+            }
+          }
+        }
+      }
+      > :nth-child(2) {
+        margin-top: 50px;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          position: relative;
+          font-size: 3rem;
+          color: rgb(218, 178, 106);
+          opacity: 0;
+          top: -200px;
+          text-decoration: none;
+          p {
+            &:hover {
+              color: rgb(3, 3, 3);
+            }
+          }
+        }
+        > :nth-child(1) {
+          animation: menu 1s ease-out 0.5s 1 forwards,
+            mymove 1s ease-out 0.5s 1 forwards;
+        }
+        > :nth-child(2) {
+          animation: menu 1s ease-out 1s 1 forwards,
+            mymove 1s ease-out 1s 1 forwards;
+        }
+        > :nth-child(3) {
+          animation: menu 1s ease-out 1.5s 1 forwards,
+            mymove 1s ease-out 1.5s 1 forwards;
+        }
+      }
+    }
+    > :nth-child(2) {
+      width: 40%;
+      background-image: url('../image/accueil-lustre.jpeg');
+      background-attachment: fixed;
+      background-position-x: 200%;
+      background-repeat: no-repeat;
+      background-size: 80% 100%;
+    }
+  }
+}
+
+//----------------section title---------------
+
+.mainBox {
+  height: 85dvh;
+
+  .title_welcome {
+    margin-top: 100px;
+    @include mixing_title_mainBox();
+    @extend .title;
+    .title {
+      font-family: 'sans-serif';
+    }
+  }
+  .title_mainBox {
+    @include mixing_title_mainBox();
+    scale: (1);
+    transition: all 1s ease-out;
+    @extend .img;
+    @extend .title;
+    @extend .country;
+  }
+  .title_mainBox_scolled {
+    color: $color_of_text;
+    transform: scale(0.2);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    @include mixing_title_mainBox();
+    @extend .img;
+    @extend .title;
+    @extend .country;
+  }
+}
+
+//----------------section Introduce---------------
+
+.introduce {
+  width: 100dvw;
+  background-color: $color_of_text;
+  .introduce_hotel {
+    @include mixing_title_mainBox();
+  }
+  .video_box {
+    position: relative;
+    width: 100%;
+    height: 85dvh;
+    overflow: hidden;
+    video {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+    .div_control_play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      transform: translateX(-40px);
+      transform: translateY(-40px);
+      border-radius: 50%;
+      border: 1px solid $color_of_text;
+      color: $color_of_text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        color: burlywood;
+        border: 1px solid burlywood;
+        transition: all 0.5s ease-out;
+      }
+      i {
+        font-size: 2rem;
+      }
+    }
+    .div_control_pause {
+      position: absolute;
+      top: 90%;
+      left: 1%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $color_of_text;
+      color: $color_of_text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        color: burlywood;
+        border: 1px solid burlywood;
+        transition: all 0.5s ease-out;
+      }
+      i {
+        font-size: 1rem;
+      }
+    }
+    .div_mute {
+      position: absolute;
+      top: 90%;
+      left: 5%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $color_of_text;
+      color: $color_of_text;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        color: burlywood;
+        border: 1px solid burlywood;
+        transition: all 0.5s ease-out;
+      }
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+  .introduce_parts {
+    width: 300dvw;
+    height: 85dvh;
+    display: flex;
+    flex-wrap: wrap;
+    .introduce_rooms {
+      width: 100dvw;
+      height: 85dvh;
+      display: flex;
+      padding: 5px 100px;
+      .introduce_room_img {
+        background-image: url('../image/introduce_room_img.jpeg');
+        @include background_prop();
+      }
+      .toggle {
+        background-size: 100% 100%;
+      }
+    }
+    .introduce_resturant {
+      width: 100dvw;
+      height: 85dvh;
+      display: flex;
+      padding: 5px 100px;
+      .introduce_resturant_img {
+        background-image: url('../image/introduce_restorunt_img.jpeg');
+        @include background_prop();
+      }
+      .toggle {
+        background-size: 100% 100%;
+      }
+    }
+    .introduce_tearoom {
+      width: 100dvw;
+      height: 85dvh;
+      display: flex;
+      padding: 5px 100px;
+      .introduce_tearoom_img {
+        background-image: url('../image/introduce_tearoom_img.jpeg');
+        @include background_prop();
+      }
+      .toggle {
+        background-size: 100% 100%;
+      }
+    }
+    .description {
+      width: 50dvw;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 50px 0px 0px;
+    }
+    .picture {
+      width: 50dvw;
+      height: 100%;
+      position: relative;
+      .slide {
+        position: absolute;
+        bottom: 0%;
+        left: 10%;
+        z-index: 1;
+        background-color: $color_of_text;
+        width: 95%;
+        height: 100%;
+      }
+      // img {
+      //   width: 100%;
+      //   height: 100%;
+      // }
+    }
+  }
+  .introduction {
+    width: 100%;
+    background-image: url('../image/Mediamodifier-Design-Template.png');
+    background-repeat: repeat;
+    & > :nth-child(1) {
+      padding: 10px;
+      width: 100%;
+      height: 85dvh;
+      display: flex;
+      position: relative;
+      .img_entree_box {
+        width: 60%;
+        scale: 0.5;
+        opacity: 0.01;
+        transition: all 1s ease-out;
+        .introducton_entree_img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .toggle {
+        scale: 1;
+        opacity: 1;
+      }
+      .p_entree_box {
+        color: $color_of_text;
+        position: relative;
+        right: -1000px;
+        padding: 50px;
+        height: 85dvh;
+        @include mixing_title_mainBox;
+        width: 40%;
+      }
+    }
+    & > :nth-child(2) {
+      padding: 10px;
+      width: 100%;
+      height: 85dvh;
+      display: flex;
+      position: relative;
+      .p_lustre_box {
+        color: $color_of_text;
+        position: relative;
+        left: -1000px;
+        padding: 50px;
+        height: 85dvh;
+        @include mixing_title_mainBox;
+        width: 40%;
+      }
+      .img_lustre_box {
+        width: 60%;
+        scale: 0.5;
+        opacity: 0.01;
+        transition: all 1s ease-out;
+        .introducton_lustre_img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .toggle {
+        scale: 1;
+        opacity: 1;
+      }
+    }
+    & > :nth-child(3) {
+      width: 100%;
+      height: 85dvh;
+      background-image: url('../image/accueil-la-mamounia-vue-drone.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .introduction_4 {
+      width: 100%;
+      background-image: url('../image/Mediamodifier-Design-Template.png');
+      background-repeat: repeat;
+      .introduction_4_title {
+        width: 100%;
+        height: 15dvh;
+        padding-top: 10px;
+        h2 {
+          color: $color_of_text;
+          text-align: center;
+          font-size: 2rem;
+          margin: 0px;
+        }
+      }
+      .introduction_4_box {
+        display: flex;
+        padding: 50px;
+        padding-bottom: 0px;
+        width: 100%;
+        height: 70dvh;
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: rgb(49, 44, 44);
+          margin-block: 1px;
+          border-radius: 100vw;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: rgb(218, 178, 106);
+          border: 1px solid rgb(49, 44, 44);
+          border-radius: 100vw;
+        }
+        .introduction_4_box_description {
+          width: 50%;
+          height: 100%;
+          color: $color_of_text;
+          margin-right: 20px;
+          padding: 10px 30px 10px 50px;
+          overflow-y: auto;
+          h3 {
+            text-align: left;
+            margin: 0px 0px 20px 0px;
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 1.1rem;
+            margin: 0px;
+            margin-bottom: 20px;
+            line-height: 21px;
+          }
+        }
+        .introduction_4_box_imag {
+          width: 50%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .introduction_5_main {
+      .introduction_5_title {
+        width: 100%;
+        height: 25dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+          text-align: center;
+          color: rgb(209, 183, 132);
+          margin: 5px;
+          font-size: 2rem;
+        }
+      }
+      & > :nth-child(2) {
+        overflow: hidden;
+        width: 100%;
+        height: 75dvh;
+        .introduction_5_scrollBox {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .introduction_5 {
+            padding-bottom: 20px;
+            width: 93%;
+            display: flex;
+            .introduction_5_image_1 {
+              width: 70%;
+              height: 450px;
+              background-image: url('../image/accueil-jardins.jpeg');
+              background-position: center;
+              background-size: 100%;
+              background-repeat: no-repeat;
+            }
+            .introduction_5_image_2 {
+              width: 70%;
+              height: 450px;
+              background-image: url('../image/accueil-hebergements-04-.jpeg');
+              background-position: center;
+              background-size: 110% 150%;
+              background-repeat: no-repeat;
+              transition: background 1s ease-out;
+            }
+            .toggle {
+              background-size: 100% 130%;
+            }
+            & > ::-webkit-scrollbar {
+              width: 1px;
+            }
+            & > ::-webkit-scrollbar-track {
+              background-color: rgb(49, 44, 44);
+              margin-block: 1px;
+              border-radius: 100vw;
+            }
+            & > ::-webkit-scrollbar-thumb {
+              background-color: rgb(218, 178, 106);
+              border-radius: 100vw;
+            }
+            & > :nth-child(2) {
+              margin: auto;
+              width: 30%;
+              height: 300px;
+              overflow-y: auto;
+              padding: 30px 20px;
+              h2 {
+                color: rgb(209, 183, 132);
+              }
+              p {
+                color: $color_of_text;
+                line-height: 30px;
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

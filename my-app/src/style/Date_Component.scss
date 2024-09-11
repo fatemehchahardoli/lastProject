@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+//------------------------------------
+@import 'main_book_Date_header';
+
+//------------------------------------
+.custom-calendar.rmdp-wrapper,
+.rmdp-container .custom-calendar.ep-arrow::after {
+  background-color: #fff;
+  border-radius: 0;
+}
+.custom-calendar.rmdp-wrapper {
+  width: 100%;
+  height: 400px;
+
+  .rmdp-top-class {
+    width: 100%;
+    height: 100%;
+    .rmdp-calendar {
+      width: 100%;
+      height: 100%;
+      .rmdp-header {
+        height: 10%;
+      }
+      & > :nth-child(2) {
+        height: 90%;
+        .rmdp-day-picker {
+          height: 100%;
+          & > :nth-child(1) {
+            width: 50%;
+            border-right: 1px solid black;
+            padding-right: 10px;
+          }
+          & > :nth-child(2) {
+            width: 50%;
+          }
+          .rmdp-week {
+            width: 100%;
+            height: 14%;
+            display: flex;
+            align-items: center;
+            .rmdp-week-day {
+              width: 14%;
+            }
+            .rmdp-day {
+              width: 14%;
+              .sd {
+                height: 100%;
+                border-radius: 5px;
+                font-size: 1.2rem;
+                &:hover {
+                  background-color: rgb(120, 25, 36);
+                  box-shadow: rgba(0, 0, 0, 0.05) 0px -23px 25px 0px inset,
+                    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+                    rgba(0, 0, 0, 0.05) 0px -79px 40px 0px inset,
+                    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+                    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+                    rgba(0, 0, 0, 0.09) 0px 6px 2px,
+                    rgba(0, 0, 0, 0.09) 0px 2px 16px;
+                }
+              }
+            }
+            .start,
+            .end {
+              border-radius: 0%;
+            }
+            .rmdp-range {
+              background-color: rgb(120, 25, 36);
+            }
+            .rmdp-today {
+              .sd {
+                background-color: rgb(120, 25, 36);
+              }
+            }
+            .rmdp-day.rmdp-selected {
+              .sd {
+                transition: all 0.15s ease-out;
+                box-shadow: rgb(95, 104, 105) 3px 3px 6px 0px inset,
+                  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+                background-color: rgba(14, 218, 82, 0.798);
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.rmdp-container .custom-calendar.ep-arrow[direction='bottom'] {
+  border-top: 1px solid bisque;
+}
+
+.rmdp-container .custom-calendar.ep-arrow[direction='top'] {
+  border-bottom: 1px solid bisque;
+}
+
+.rmdp-range:has(.reserved) {
+  background-color: #6a6a6b72;
+}
+
+.rmdp-range:has(.in-service) {
+  background-color: #cc030396;
+}
+
+.reserved {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: small;
+  color: #858585;
+  box-shadow: rgb(95, 104, 105) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  &:hover {
+    cursor: default;
+  }
+  &::after {
+    content: 'Reserved';
+    font-size: 0.5rem;
+  }
+}
+
+.in-service {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: small;
+  color: #ff0000;
+  &:hover {
+    cursor: default;
+  }
+  &::after {
+    content: 'In service';
+    font-size: 0.5rem;
+  }
+}
+
+.un-availble {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.un-availble p {
+  margin: 0;
+}
+
+//-------------------------
+
+.MainBox_book {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 70dvh;
+  background-color: rgb(120, 25, 36);
+  width: 100dvw;
+  padding: 20px;
+  .main_book_Date {
+    width: 70%;
+  }
+
+  .clandar_bth {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+
+    #Unselect {
+      background-color: #fff;
+      color: black;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      border: 1px dashed black;
+      transition: scale 0.3s ease-out;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+    #Today {
+      background-color: #fff;
+      color: black;
+      border: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      border: 1px dashed black;
+      transition: scale 0.3s ease-out;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+    #Search {
+      background-color: rgb(120, 25, 36);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px 25px;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      font-size: 1rem;
+    }
+  }
+
+  .your_stay {
+    width: 28%;
+    height: 65dvh;
+    border: 1px solid black;
+    position: sticky;
+    top: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

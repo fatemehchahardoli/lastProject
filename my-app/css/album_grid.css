@@ -1,0 +1,462 @@
+.introduction_6 {
+  width: 100dvw;
+  background-color: rgb(244, 239, 227);
+  padding: 50px;
+}
+.introduction_6 .row {
+  display: flex;
+  width: 100%;
+}
+.introduction_6 .column_1 {
+  position: relative;
+  width: 25%;
+}
+.introduction_6 .column_1 > :nth-child(1) {
+  height: 75dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  color: rgb(120, 25, 36);
+  font-weight: bolder;
+  padding: 10px;
+}
+.introduction_6 .column_1 > :nth-child(1) p {
+  margin-bottom: 0px;
+}
+.introduction_6 .column_1 > :nth-child(2) {
+  height: 35dvh;
+  background-image: url("../image/accueil-la-mamounia-vue-drone.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_1 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_1 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_1 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_1 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_1 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_1 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_1 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}
+.introduction_6 .column_2 {
+  width: 25%;
+  margin: 50px 0px;
+}
+.introduction_6 .column_2 > :nth-child(1) {
+  height: 65dvh;
+  background-image: url("../image/l-asiatique-par-jean-georges-salle-9-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(1) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(1) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(1) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_2 > :nth-child(1):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_2 > :nth-child(1):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_2 > :nth-child(2) {
+  height: 35dvh;
+  background-image: url("../image/introduce_restorunt_img.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_2 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_2 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_2 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_2 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}
+.introduction_6 .column_3 {
+  width: 25%;
+}
+.introduction_6 .column_3 > :nth-child(1) {
+  height: 35dvh;
+  background-image: url("../image/accueil-lustre.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(1) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(1) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(1) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_3 > :nth-child(1):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_3 > :nth-child(1):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_3 > :nth-child(2) {
+  height: 45dvh;
+  background-image: url("../image/le-pavillon-de-la-piscine-petit-dejeuner-piscine-7-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_3 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_3 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_3 > :nth-child(3) {
+  height: 30dvh;
+  background-image: url("../image/l-italien-par-jean-georges-exterieurs-2-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(3) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(3) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(3) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_3 > :nth-child(3):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_3 > :nth-child(3):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_3 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_3 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}
+.introduction_6 .column_4 {
+  width: 25%;
+  margin: 100px 0px 100px 0px;
+}
+.introduction_6 .column_4 > :nth-child(1) {
+  height: 35dvh;
+  background-image: url("../image/l-italien-par-jean-georges-cuisine-7-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(1) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(1) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(1) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_4 > :nth-child(1):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_4 > :nth-child(1):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_4 > :nth-child(2) {
+  height: 55dvh;
+  background-image: url("../image/bar-majorelle-bar.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_4 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_4 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_4 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_4 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}/*# sourceMappingURL=album_grid.css.map */

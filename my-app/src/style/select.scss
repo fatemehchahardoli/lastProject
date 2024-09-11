@@ -1,0 +1,49 @@
+.css-b62m3t-container {
+    width: 200px;
+    max-height: 20px;
+    .css-1hb7zxy-IndicatorsContainer {
+      .css-1xc3v61-indicatorContainer {
+        cursor: pointer;
+        svg {
+          color: rgba(120, 25, 36, 0.4);
+          transition: color 0.3s ease-out;
+          &:hover {
+            color: rgba(120, 25, 36, 1);
+          }
+        }
+      }
+    }
+    .css-13cymwt-control {
+      border: 1px solid rgba(120, 25, 36, 1);
+      .css-1fdsijx-ValueContainer {
+        display: flex;
+        justify-content: space-between;
+        .css-1jqq78o-placeholder{
+          color: rgba(120, 25, 36, 1);
+        }
+        .css-1dimb5e-singleValue {
+          width: 100%;
+        }
+        .css-qbdosj-Input{
+          display: none;
+        }
+      }
+    }
+    .css-1nmdiq5-menu {
+      .css-d7l1ni-option {
+        &:hover {
+          background-color: #fff;
+          color: black;
+          cursor: pointer;
+        }
+      }
+      .css-tr4s17-option {
+        background-color: rgba(120, 25, 36, 1);
+      }
+      .css-10wo9uf-option {
+        background-color: rgba(120, 25, 36, 1);
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }

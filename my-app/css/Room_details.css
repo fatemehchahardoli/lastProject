@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+.main_Room_details {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+}
+.main_Room_details .Room_details_image_container {
+  width: 30%;
+}
+.main_Room_details .Room_details_image_container img {
+  width: 250px;
+  height: 180px;
+  border-radius: 5px;
+}
+.main_Room_details .Room_details_container {
+  width: 70%;
+}
+.main_Room_details .Room_details_container .Room_details_container_name {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+.main_Room_details .Room_details_container .Room_details_container_name h3 {
+  font-size: 2rem;
+  margin-top: 5px;
+}
+.main_Room_details .Room_details_container .Room_details_container_name a {
+  color: black;
+}
+.main_Room_details .Room_details_container .Room_details_container_price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.main_Room_details .Room_details_container .Room_details_container_price > div h6 {
+  margin: 5px 0px;
+}
+.main_Room_details .Room_details_container .Room_details_container_price > div > :nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.main_Room_details .Room_details_container .Room_details_container_price > div > :nth-child(2) {
+  font-size: 1.2rem;
+}
+.main_Room_details .Room_details_container .Room_details_container_price > div > :nth-child(3) {
+  font-size: 1.2rem;
+  color: #969696;
+}
+.main_Room_details .Room_details_container .Room_details_container_price > div button {
+  background-color: #e55302;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 10dvw;
+}/*# sourceMappingURL=Room_details.css.map */

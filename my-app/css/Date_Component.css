@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+.custom-calendar.rmdp-wrapper,
+.rmdp-container .custom-calendar.ep-arrow::after {
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.custom-calendar.rmdp-wrapper {
+  width: 100%;
+  height: 400px;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class {
+  width: 100%;
+  height: 100%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar {
+  width: 100%;
+  height: 100%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar .rmdp-header {
+  height: 10%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) {
+  height: 90%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker {
+  height: 100%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker > :nth-child(1) {
+  width: 50%;
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker > :nth-child(2) {
+  width: 50%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week {
+  width: 100%;
+  height: 14%;
+  display: flex;
+  align-items: center;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .rmdp-week-day {
+  width: 14%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .rmdp-day {
+  width: 14%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .rmdp-day .sd {
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .rmdp-day .sd:hover {
+  background-color: rgb(120, 25, 36);
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .start,
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .end {
+  border-radius: 0%;
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .rmdp-range {
+  background-color: rgb(120, 25, 36);
+}
+.custom-calendar.rmdp-wrapper .rmdp-top-class .rmdp-calendar > :nth-child(2) .rmdp-day-picker .rmdp-week .rmdp-today .sd {
+  background-color: black;
+}
+
+.rmdp-container .custom-calendar.ep-arrow[direction=bottom] {
+  border-top: 1px solid bisque;
+}
+
+.rmdp-container .custom-calendar.ep-arrow[direction=top] {
+  border-bottom: 1px solid bisque;
+}
+
+.rmdp-range:has(.reserved) {
+  background-color: #8fb4f9;
+}
+
+.rmdp-range:has(.in-service) {
+  background-color: #cc0303;
+}
+
+.reserved {
+  background-color: #8fb4f9;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.in-service {
+  background-color: #cc0303;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.un-availble {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.un-availble p {
+  margin: 0;
+}
+
+.MainBox_book {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 70dvh;
+  background-color: rgb(120, 25, 36);
+  width: 100dvw;
+  padding: 20px;
+}
+.MainBox_book .main_book_Date {
+  width: 70%;
+}
+.MainBox_book .main_book_Date .main_book_Date_headre {
+  display: flex;
+}
+.MainBox_book .main_book_Date .main_book_Date_headre > div {
+  width: 33.33%;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+}
+.MainBox_book .main_book_Date .clandar_bth {
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+}
+.MainBox_book .main_book_Date .clandar_bth #Unselect {
+  background-color: #fff;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.MainBox_book .main_book_Date .clandar_bth #Today {
+  background-color: #fff;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.MainBox_book .main_book_Date .clandar_bth #Search {
+  background-color: #e55302;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.MainBox_book .your_stay {
+  width: 28%;
+  height: 28dvh;
+  border: 1px solid black;
+  position: sticky;
+  top: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}/*# sourceMappingURL=Date_Component.css.map */

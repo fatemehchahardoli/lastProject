@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+}
+//---------------------------------------------------------------
+
+@mixin lable_style {
+  .label_Login {
+    color: #ffffff88;
+    left: 20px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 10px;
+    letter-spacing: 1px;
+  }
+  .inpute_Login {
+    background-color: rgba(117, 117, 117, 0);
+    border-radius: 5px;
+    border: 1px solid #fdf0d5;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 18px;
+    height: 70%;
+    outline: 0;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+  .Note {
+    display: none;
+    position: absolute;
+    right: 110%;
+    width: 200px;
+    background-color: #caf0f8;
+    color: #003049;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #00b4d8;
+    padding: 20px;
+    i {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      color: #003049;
+    }
+  }
+  span {
+    width: 100%;
+    color: #fdf0d5;
+    height: 30%;
+    background-color: #c1121f;
+    border-radius: 3px;
+    padding-left: 5px;
+    display: flex;
+  }
+  .inpute_Login:focus {
+    border: 2px solid #cbdfbd;
+  }
+  .inpute_Login:focus ~ .Note {
+    display: block;
+  }
+  .inpute_Login:focus ~ .label_Login,
+  .inpute_Login:not(:placeholder-shown) ~ .label_Login {
+    transform: translateY(-29px) translateX(-15px) scale(0.9);
+  }
+
+  .inpute_Login:not(:placeholder-shown) ~ .label_Login {
+    color: #fff;
+  }
+
+  .inpute_Login:focus ~ .label_Login {
+    color: #fff;
+  }
+}
+@mixin Login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin: 20px;
+  }
+  .Login_formik_form {
+    .Login_formik_form_username {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+      @include lable_style;
+    }
+    .Login_formik_form_password {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+      @include lable_style;
+    }
+    .Login_remember {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 20px;
+
+      p {
+        color: #fff;
+        margin: 0px;
+      }
+      input {
+        cursor: pointer;
+      }
+    }
+  }
+  .Login_btn_container {
+    margin-bottom: 15px;
+    button {
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+      background-color: #780000;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: bolder;
+    }
+  }
+  .SignIn_btn_container {
+    .Forget_btn {
+      width: 60%;
+      height: 30px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .SignIn_btn {
+      width: 30%;
+      height: 30px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+}
+@mixin signin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+  .Login_formik_form {
+    .Login_formik_form_username {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+      @include lable_style;
+    }
+    .Login_formik_form_password {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+      @include lable_style;
+    }
+    .Login_remember {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 20px;
+
+      p {
+        color: #fff;
+        margin: 0px;
+      }
+      input {
+        cursor: pointer;
+      }
+    }
+  }
+  .Login_btn_container {
+    margin-bottom: 5px;
+    button {
+      width: 100%;
+      height: 30px;
+      cursor: pointer;
+      background-color: #780000;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: bolder;
+    }
+  }
+  .SignIn_btn_container {
+    .SignIn_btn {
+      width: 100%;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      p {
+        margin: 0px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------
+
+@keyframes loginhidden {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes signinhidden {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-111.5%);
+  }
+}
+
+@keyframes loginshow {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes signinshow {
+  from {
+    transform: translateX(-111.5%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+//---------------------------------------------------------------
+.Login_main {
+  width: 100dvw;
+  height: 100dvh;
+  background-image: url(../image/accueil-la-mamounia-vue-drone.jpeg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  .blur {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .LoginBox_container {
+      width: 50%;
+      height: 70%;
+      display: flex;
+      .Login_form_container {
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 48, 73, 0.4);
+        padding: 20px;
+        .Login_formik_container {
+          @include Login();
+        }
+        .Login_formik_container_show {
+          @include Login();
+          animation: loginshow 1s cubic-bezier(1, -0.4, 0.2, 0) 1 forwards;
+        }
+        .Login_formik_container_hidden {
+          @include Login();
+          animation: loginhidden 1s cubic-bezier(1, -0.4, 0.2, 0) 1 forwards;
+        }
+      }
+      > :nth-child(2) {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        .Signin_form_container {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 48, 73, 0.3);
+          padding: 20px;
+          .Signin_formik_container {
+            @include signin();
+          }
+          .Signin_formik_container_hidden {
+            @include signin();
+            animation: signinshow 1s cubic-bezier(1, -0.4, 0.2, 0) 1 forwards;
+          }
+          .Signin_formik_container_show {
+            @include signin();
+            animation: signinhidden 1s cubic-bezier(1, -0.4, 0.2, 0) 1 forwards;
+          }
+        }
+        .Login_image {
+          position: absolute;
+          top: 0px;
+          width: 100%;
+          height: 100%;
+          background-color: #fdf0d5;
+          background-image: url(../image/logo.svg);
+          background-repeat: no-repeat;
+          background-size: 70%;
+          background-position: center;
+          padding: 20px;
+          z-index: 10;
+          > div {
+            width: 100%;
+            height: 100%;
+            border: 3px solid #003049;
+          }
+        }
+      }
+    }
+  }
+}
+
+.user_pass_wrong {
+  display: none;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #caf0f8;
+  border-radius: 5px;
+  i {
+    color: #c1121f;
+    margin-right: 10px;
+  }
+  p {
+    color: #c1121f;
+  }
+}

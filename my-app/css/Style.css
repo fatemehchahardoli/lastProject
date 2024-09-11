@@ -1,0 +1,1336 @@
+.menu {
+  width: 39px;
+  display: flex;
+  align-items: center;
+}
+
+.menu_button {
+  width: 39px;
+  overflow: hidden;
+}
+
+.menu_label {
+  position: relative;
+  display: block;
+  height: 29px;
+  cursor: pointer;
+}
+
+.menu_label:before,
+.menu_label:after,
+.menu_text_bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.menu_label:before,
+.menu_label:after {
+  content: "";
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+}
+
+.menu_label:before {
+  top: 0;
+}
+
+.menu_label:after {
+  top: 12px;
+}
+
+.menu_text_bar {
+  top: 24px;
+}
+
+.menu_text_bar:before {
+  content: "Menu";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.menu_button:hover .menu_label::before {
+  left: -39px;
+}
+
+.menu_button:hover .menu_label::after {
+  left: 39px;
+}
+
+.menu_button:hover .menu_label .menu_text_bar:before {
+  animation: moveUpThenDown 0.4s ease 0.2s forwards, shakeWhileMovingUp 0.4s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.4s forwards;
+  color: #fff;
+}
+
+@keyframes moveUpThenDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -27px;
+  }
+  100% {
+    top: -16px;
+  }
+}
+@keyframes shakeWhileMovingUp {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+@keyframes shakeWhileMovingDown {
+  0% {
+    transform: rotateZ(0);
+  }
+  80% {
+    transform: rotateZ(3deg);
+  }
+  90% {
+    transform: rotateZ(-3deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+.introduction_6 {
+  width: 100dvw;
+  background-color: rgb(244, 239, 227);
+  padding: 50px;
+}
+.introduction_6 .row {
+  display: flex;
+  width: 100%;
+}
+.introduction_6 .column_1 {
+  position: relative;
+  width: 25%;
+}
+.introduction_6 .column_1 > :nth-child(1) {
+  height: 75dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  color: rgb(120, 25, 36);
+  font-weight: bolder;
+  padding: 10px;
+}
+.introduction_6 .column_1 > :nth-child(1) p {
+  margin-bottom: 0px;
+}
+.introduction_6 .column_1 > :nth-child(2) {
+  height: 35dvh;
+  background-image: url("../image/accueil-la-mamounia-vue-drone.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_1 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_1 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_1 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_1 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_1 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_1 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_1 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}
+.introduction_6 .column_2 {
+  width: 25%;
+  margin: 50px 0px;
+}
+.introduction_6 .column_2 > :nth-child(1) {
+  height: 65dvh;
+  background-image: url("../image/l-asiatique-par-jean-georges-salle-9-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(1) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(1) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(1) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_2 > :nth-child(1):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_2 > :nth-child(1):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_2 > :nth-child(2) {
+  height: 35dvh;
+  background-image: url("../image/introduce_restorunt_img.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_2 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_2 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_2 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_2 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_2 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}
+.introduction_6 .column_3 {
+  width: 25%;
+}
+.introduction_6 .column_3 > :nth-child(1) {
+  height: 35dvh;
+  background-image: url("../image/accueil-lustre.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(1) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(1) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(1) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_3 > :nth-child(1):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_3 > :nth-child(1):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_3 > :nth-child(2) {
+  height: 45dvh;
+  background-image: url("../image/le-pavillon-de-la-piscine-petit-dejeuner-piscine-7-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_3 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_3 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_3 > :nth-child(3) {
+  height: 30dvh;
+  background-image: url("../image/l-italien-par-jean-georges-exterieurs-2-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(3) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(3) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_3 > :nth-child(3) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_3 > :nth-child(3):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_3 > :nth-child(3):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_3 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_3 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}
+.introduction_6 .column_4 {
+  width: 25%;
+  margin: 100px 0px 100px 0px;
+}
+.introduction_6 .column_4 > :nth-child(1) {
+  height: 35dvh;
+  background-image: url("../image/l-italien-par-jean-georges-cuisine-7-.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(1) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(1) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(1) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_4 > :nth-child(1):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_4 > :nth-child(1):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_4 > :nth-child(2) {
+  height: 55dvh;
+  background-image: url("../image/bar-majorelle-bar.jpeg");
+  overflow: hidden;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  background-color: rgba(255, 255, 255, 0.2);
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+.introduction_6 .column_4 > :nth-child(2) > :nth-child(2) i {
+  font-size: 2rem;
+  color: white;
+}
+.introduction_6 .column_4 > :nth-child(2):hover > :nth-child(1) {
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.introduction_6 .column_4 > :nth-child(2):hover > :nth-child(2) {
+  left: -5px;
+  bottom: -5px;
+  z-index: 2;
+}
+.introduction_6 .column_4 > div {
+  margin: 8px 4px;
+}
+.introduction_6 .column_4 :hover {
+  background-size: 120% 120%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.footer .footer_up {
+  height: 35dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+.footer .footer_up > :nth-child(1) {
+  width: 33%;
+}
+.footer .footer_up > :nth-child(1) .iconBox {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) {
+  display: flex;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) > div {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: rgb(120, 25, 36);
+  display: flex;
+  margin: 0 5px;
+  transition: opacity, scale 0.5s ease-out;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  scale: 1.1;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(1) > div i {
+  color: #fff;
+  background-color: rgb(120, 25, 36);
+  margin: auto;
+  font-size: 20px;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) {
+  display: flex;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) > div {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: rgb(120, 25, 36);
+  display: flex;
+  margin: 0 5px;
+  transition: opacity, scale 0.5s ease-out;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  scale: 1.1;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) > div i {
+  color: #fff;
+  background-color: rgb(120, 25, 36);
+  margin: auto;
+  font-size: 20px;
+}
+.footer .footer_up > :nth-child(1) .iconBox > :nth-child(2) img {
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  margin: auto;
+}
+.footer .footer_up .logo {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+.footer .footer_up .logo img {
+  transition: scale 0.5s ease-out;
+}
+.footer .footer_up .logo img:hover {
+  scale: 0.9;
+  cursor: pointer;
+}
+.footer .footer_up .contact {
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer .footer_up .contact > div {
+  padding: 10px;
+}
+.footer .footer_up .contact > div p {
+  text-align: right;
+  font-size: 1.2rem;
+}
+.footer .shape {
+  display: flex;
+  height: 5dvh;
+}
+.footer .shape > :nth-child(1) {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  border-radius: 0 50% 0 0;
+}
+.footer .shape > :nth-child(2) {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  border-radius: 50% 0 0 0;
+}
+.footer .footer_down {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 40px 40px 40px;
+}
+.footer .footer_down > :nth-child(1) {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid wheat;
+  padding: 20px 50px 50px 50px;
+}
+.footer .footer_down > :nth-child(1) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
+}
+.footer .footer_down > :nth-child(1) > div > div {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+.footer .footer_down > :nth-child(1) > div > div a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .footer_down > :nth-child(2) {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid wheat;
+  padding: 50px 50px 50px 50px;
+}
+.footer .footer_down > :nth-child(2) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
+}
+.footer .footer_down > :nth-child(2) > div > div {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+.footer .footer_down > :nth-child(2) > div > div a {
+  text-decoration: none;
+  color: wheat;
+}
+.footer .footer_down > :nth-child(3) {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px 50px 20px;
+}
+.footer .footer_down > :nth-child(3) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .footer_down > :nth-child(3) > div > div {
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer_down > :nth-child(3) > div > div a {
+  text-decoration: none;
+  color: #fff;
+  margin: 5px 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(242, 242, 242);
+  margin-block: 1px;
+  border-radius: 100vw;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(120, 25, 36);
+  border: 1px solid rgb(242, 242, 242);
+  border-radius: 100vw;
+  cursor: grab;
+}
+
+@supports (scrollbar-color: red blue yellow black) {
+  * {
+    scrollbar-color: rgb(120, 25, 36) rgb(49, 44, 44) rgb(218, 178, 106) rgb(49, 44, 44);
+    scrollbar-width: 10px;
+  }
+}
+.img, .mainBox .title_mainBox_scolled, .mainBox .title_mainBox, .header_Home .slide_Shadow_active .title_mainBox_scolled, .header_Home .slide_Shadow .title_mainBox {
+  margin-top: 40px;
+  width: 80px;
+}
+
+.title, .mainBox .title_mainBox_scolled, .mainBox .title_mainBox, .mainBox .title_welcome, .header_Home .slide_Shadow_active .title_mainBox_scolled, .header_Home .slide_Shadow .title_mainBox {
+  margin: 20px 0px 0px 0px;
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 8px;
+  color: #fff;
+}
+
+.country, .mainBox .title_mainBox_scolled, .mainBox .title_mainBox, .header_Home .slide_Shadow_active .title_mainBox_scolled, .header_Home .slide_Shadow .title_mainBox {
+  margin-top: 0px;
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 8px;
+  color: #fff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.main_body {
+  width: 100dvw;
+}
+
+.main {
+  width: 100dvw;
+  background-image: url("../image/accueil-salon (1).jpeg");
+  background-size: 100% 160%;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  background-position: center;
+}
+.main::after {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.shadow {
+  width: 100dvw;
+}
+
+.header_Home {
+  width: 100dvw;
+  height: 15dvh;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+.header_Home .slide_Shadow {
+  width: 100%;
+  height: 0dvh;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  position: absolute;
+  transition: all 0.5s ease-out;
+  display: flex;
+  justify-content: center;
+}
+.header_Home .slide_Shadow .title_mainBox {
+  position: absolute;
+  top: -8dvh;
+  opacity: 0;
+  scale: 0.1;
+  transition: all 0.3s ease-out;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header_Home .slide_Shadow_active {
+  width: 100%;
+  height: 15dvh;
+  background-color: rgb(0, 0, 0);
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  position: absolute;
+  transition: height 0.5s ease-out;
+}
+.header_Home .slide_Shadow_active .title_mainBox_scolled {
+  position: absolute;
+  top: -8dvh;
+  opacity: 1;
+  scale: 0.5;
+  transition: all 1s ease-out;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header_Home .header_tab {
+  display: flex;
+  align-items: center;
+}
+.header_Home .header_tab ul {
+  margin: 0px;
+  display: flex;
+}
+.header_Home .header_tab ul a {
+  text-decoration: none;
+  padding: 8px;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+.header_Home .header_tab ul a li {
+  list-style: none;
+}
+
+.mainBox {
+  height: 85dvh;
+}
+.mainBox .title_welcome {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mainBox .title_welcome .title, .mainBox .title_welcome .title_mainBox_scolled, .mainBox .title_welcome .title_mainBox, .mainBox .title_welcome .title_welcome {
+  font-family: "sans-serif";
+}
+.mainBox .title_mainBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  scale: 1;
+  transition: all 1s ease-out;
+}
+.mainBox .title_mainBox_scolled {
+  color: #fff;
+  transform: scale(0.2);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.introduce {
+  width: 100dvw;
+  background-color: #fff;
+}
+.introduce .introduce_hotel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.introduce .video_box {
+  position: relative;
+  width: 100%;
+  height: 85dvh;
+  overflow: hidden;
+}
+.introduce .video_box video {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.introduce .video_box .div_control_play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translateX(-40px);
+  transform: translateY(-40px);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.introduce .video_box .div_control_play:hover {
+  color: burlywood;
+  border: 1px solid burlywood;
+  transition: all 0.5s ease-out;
+}
+.introduce .video_box .div_control_play i {
+  font-size: 2rem;
+}
+.introduce .video_box .div_control_pause {
+  position: absolute;
+  top: 90%;
+  left: 1%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.introduce .video_box .div_control_pause:hover {
+  color: burlywood;
+  border: 1px solid burlywood;
+  transition: all 0.5s ease-out;
+}
+.introduce .video_box .div_control_pause i {
+  font-size: 1rem;
+}
+.introduce .video_box .div_mute {
+  position: absolute;
+  top: 90%;
+  left: 5%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.introduce .video_box .div_mute:hover {
+  color: burlywood;
+  border: 1px solid burlywood;
+  transition: all 0.5s ease-out;
+}
+.introduce .video_box .div_mute i {
+  font-size: 1rem;
+}
+.introduce .introduce_parts {
+  width: 300dvw;
+  height: 85dvh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.introduce .introduce_parts .introduce_rooms {
+  width: 100dvw;
+  height: 85dvh;
+  display: flex;
+  padding: 5px 100px;
+}
+.introduce .introduce_parts .introduce_rooms .introduce_room_img {
+  background-image: url("../image/introduce_room_img.jpeg");
+  background-size: 120% 120%;
+  background-position: center;
+  transition: background-size 1s ease-out;
+}
+.introduce .introduce_parts .introduce_rooms .toggle {
+  background-size: 100% 100%;
+}
+.introduce .introduce_parts .introduce_resturant {
+  width: 100dvw;
+  height: 85dvh;
+  display: flex;
+  padding: 5px 100px;
+}
+.introduce .introduce_parts .introduce_resturant .introduce_resturant_img {
+  background-image: url("../image/introduce_restorunt_img.jpeg");
+  background-size: 120% 120%;
+  background-position: center;
+  transition: background-size 1s ease-out;
+}
+.introduce .introduce_parts .introduce_resturant .toggle {
+  background-size: 100% 100%;
+}
+.introduce .introduce_parts .introduce_tearoom {
+  width: 100dvw;
+  height: 85dvh;
+  display: flex;
+  padding: 5px 100px;
+}
+.introduce .introduce_parts .introduce_tearoom .introduce_tearoom_img {
+  background-image: url("../image/introduce_tearoom_img.jpeg");
+  background-size: 120% 120%;
+  background-position: center;
+  transition: background-size 1s ease-out;
+}
+.introduce .introduce_parts .introduce_tearoom .toggle {
+  background-size: 100% 100%;
+}
+.introduce .introduce_parts .description {
+  width: 50dvw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px 0px 0px;
+}
+.introduce .introduce_parts .picture {
+  width: 50dvw;
+  height: 100%;
+  position: relative;
+}
+.introduce .introduce_parts .picture .slide {
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+  z-index: 1;
+  background-color: #fff;
+  width: 95%;
+  height: 100%;
+}
+.introduce .introduction {
+  width: 100%;
+  background-image: url("../image/Mediamodifier-Design-Template.png");
+  background-repeat: repeat;
+}
+.introduce .introduction > :nth-child(1) {
+  padding: 10px;
+  width: 100%;
+  height: 85dvh;
+  display: flex;
+  position: relative;
+}
+.introduce .introduction > :nth-child(1) .img_entree_box {
+  width: 60%;
+  scale: 0.5;
+  opacity: 0.01;
+  transition: all 1s ease-out;
+}
+.introduce .introduction > :nth-child(1) .img_entree_box .introducton_entree_img {
+  width: 100%;
+  height: 100%;
+}
+.introduce .introduction > :nth-child(1) .toggle {
+  scale: 1;
+  opacity: 1;
+}
+.introduce .introduction > :nth-child(1) .p_entree_box {
+  color: #fff;
+  position: relative;
+  right: -1000px;
+  padding: 50px;
+  height: 85dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+}
+.introduce .introduction > :nth-child(2) {
+  padding: 10px;
+  width: 100%;
+  height: 85dvh;
+  display: flex;
+  position: relative;
+}
+.introduce .introduction > :nth-child(2) .p_lustre_box {
+  color: #fff;
+  position: relative;
+  left: -1000px;
+  padding: 50px;
+  height: 85dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+}
+.introduce .introduction > :nth-child(2) .img_lustre_box {
+  width: 60%;
+  scale: 0.5;
+  opacity: 0.01;
+  transition: all 1s ease-out;
+}
+.introduce .introduction > :nth-child(2) .img_lustre_box .introducton_lustre_img {
+  width: 100%;
+  height: 100%;
+}
+.introduce .introduction > :nth-child(2) .toggle {
+  scale: 1;
+  opacity: 1;
+}
+.introduce .introduction > :nth-child(3) {
+  width: 100%;
+  height: 85dvh;
+  background-image: url("../image/accueil-la-mamounia-vue-drone.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.introduce .introduction .introduction_4 {
+  width: 100%;
+  background-image: url("../image/Mediamodifier-Design-Template.png");
+  background-repeat: repeat;
+}
+.introduce .introduction .introduction_4 .introduction_4_title {
+  width: 100%;
+  height: 15dvh;
+  padding-top: 10px;
+}
+.introduce .introduction .introduction_4 .introduction_4_title h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0px;
+}
+.introduce .introduction .introduction_4 .introduction_4_box {
+  display: flex;
+  padding: 50px;
+  padding-bottom: 0px;
+  width: 100%;
+  height: 70dvh;
+}
+.introduce .introduction .introduction_4 .introduction_4_box::-webkit-scrollbar {
+  width: 5px;
+}
+.introduce .introduction .introduction_4 .introduction_4_box::-webkit-scrollbar-track {
+  background-color: rgb(49, 44, 44);
+  margin-block: 1px;
+  border-radius: 100vw;
+}
+.introduce .introduction .introduction_4 .introduction_4_box::-webkit-scrollbar-thumb {
+  background-color: rgb(218, 178, 106);
+  border: 1px solid rgb(49, 44, 44);
+  border-radius: 100vw;
+}
+.introduce .introduction .introduction_4 .introduction_4_box .introduction_4_box_description {
+  width: 50%;
+  height: 100%;
+  color: #fff;
+  margin-right: 20px;
+  padding: 10px 30px 10px 50px;
+  overflow-y: auto;
+}
+.introduce .introduction .introduction_4 .introduction_4_box .introduction_4_box_description h3 {
+  text-align: left;
+  margin: 0px 0px 20px 0px;
+  font-size: 1.5rem;
+}
+.introduce .introduction .introduction_4 .introduction_4_box .introduction_4_box_description p {
+  font-size: 1.1rem;
+  margin: 0px;
+  margin-bottom: 20px;
+  line-height: 21px;
+}
+.introduce .introduction .introduction_4 .introduction_4_box .introduction_4_box_imag {
+  width: 50%;
+}
+.introduce .introduction .introduction_4 .introduction_4_box .introduction_4_box_imag img {
+  width: 100%;
+  height: 100%;
+}
+.introduce .introduction .introduction_5_main .introduction_5_title {
+  width: 100%;
+  height: 25dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.introduce .introduction .introduction_5_main .introduction_5_title h2 {
+  text-align: center;
+  color: rgb(209, 183, 132);
+  margin: 5px;
+  font-size: 2rem;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) {
+  overflow: hidden;
+  width: 100%;
+  height: 75dvh;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 {
+  padding-bottom: 20px;
+  width: 93%;
+  display: flex;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 .introduction_5_image_1 {
+  width: 70%;
+  height: 450px;
+  background-image: url("../image/accueil-jardins.jpeg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 .introduction_5_image_2 {
+  width: 70%;
+  height: 450px;
+  background-image: url("../image/accueil-hebergements-04-.jpeg");
+  background-position: center;
+  background-size: 110% 150%;
+  background-repeat: no-repeat;
+  transition: background 1s ease-out;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 .toggle {
+  background-size: 100% 130%;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 > ::-webkit-scrollbar {
+  width: 1px;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 > ::-webkit-scrollbar-track {
+  background-color: rgb(49, 44, 44);
+  margin-block: 1px;
+  border-radius: 100vw;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 > ::-webkit-scrollbar-thumb {
+  background-color: rgb(218, 178, 106);
+  border-radius: 100vw;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 > :nth-child(2) {
+  margin: auto;
+  width: 30%;
+  height: 300px;
+  overflow-y: auto;
+  padding: 30px 20px;
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 > :nth-child(2) h2 {
+  color: rgb(209, 183, 132);
+}
+.introduce .introduction .introduction_5_main > :nth-child(2) .introduction_5_scrollBox .introduction_5 > :nth-child(2) p {
+  color: #fff;
+  line-height: 30px;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=Style.css.map */
