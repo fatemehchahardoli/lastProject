@@ -1,10 +1,23 @@
 {
   "Rooms": [
     {
-      "0": ["2024/10/08"],
+      "0": [
+        "2024/10/08"
+      ],
       "name": "Classic Twin Room",
-      "reserved": [["2024/10/08"], ["2024/10/09"]],
-      "inService": [["2024/10/03"]],
+      "reserved": [
+        [
+          "2024/10/08"
+        ],
+        [
+          "2024/10/09"
+        ]
+      ],
+      "inService": [
+        [
+          "2024/10/03"
+        ]
+      ],
       "guests": [
         {
           "first_name": "nariman",
@@ -13,7 +26,9 @@
           "email_address": "narimanhafari88@gmail.com",
           "adult": 1,
           "children": 0,
-          "reserved": ["2024/10/09"],
+          "reserved": [
+            "2024/10/09"
+          ],
           "country": "Afghanistan"
         },
         {
@@ -23,7 +38,9 @@
           "email_address": "narimanhafari88@gmail.com",
           "adult": 1,
           "children": 0,
-          "reserved": ["2024/10/08"],
+          "reserved": [
+            "2024/10/08"
+          ],
           "country": "Åland Islands"
         }
       ],
@@ -63,12 +80,27 @@
       "details": "The Classic Hivernage rooms are decorated in warm, rich tones to create a welcoming ambience, and offer a pleasant view over the inner courtyard garden. With sizes ranging from 28 to 40 sq.m, with twin beds. The Marble Bathrooms allow a soothing mood lighting and are all completed with a Moroccan style Walk in Shower. WiFi is offered complimentary, a welcoming cocktail and local delicacies.",
       "room_id": 1,
       "id": "25c8",
-      "newReserved": [["2024/10/09"]]
+      "newReserved": [
+        [
+          "2024/10/09"
+        ]
+      ]
     },
     {
       "name": "Deluxe Agdal Room",
-      "reserved": ["2024/10/03"],
-      "inService": [["2024/07/05", "2024/07/08"]],
+      "reserved": [
+        "2024/10/03",
+        [
+          "2024/10/14",
+          "2024/10/17"
+        ]
+      ],
+      "inService": [
+        [
+          "2024/07/05",
+          "2024/07/08"
+        ]
+      ],
       "guests": [
         {
           "first_name": "ali",
@@ -77,8 +109,23 @@
           "email_address": "narimanhafari88@gmail.com",
           "adult": 1,
           "children": 0,
-          "reserved": ["2024/10/03"],
+          "reserved": [
+            "2024/10/03"
+          ],
           "country": "Afghanistan"
+        },
+        {
+          "first_name": "احمد",
+          "last_name": "رجبی",
+          "phone_number": "009120329771",
+          "email_address": "chahardoliftemehb@gmail.com",
+          "adult": 2,
+          "children": 2,
+          "reserved": [
+            "2024/10/14",
+            "2024/10/17"
+          ],
+          "country": "Iran"
         }
       ],
       "price": 1830,
@@ -122,9 +169,28 @@
     },
     {
       "name": "Superior Hivernage Room",
-      "reserved": [],
+      "reserved": [
+        [
+          "2024/10/13",
+          "2024/10/17"
+        ]
+      ],
       "inService": [],
-      "guests": [],
+      "guests": [
+        {
+          "first_name": "احمد",
+          "last_name": "رجبی",
+          "phone_number": "009120329771",
+          "email_address": "chahardoliftemehb@gmail.com",
+          "adult": 1,
+          "children": 0,
+          "reserved": [
+            "2024/10/13",
+            "2024/10/17"
+          ],
+          "country": "Albania"
+        }
+      ],
       "price": 900,
       "Sleeps": 2,
       "img": [
@@ -164,7 +230,9 @@
     },
     {
       "name": "Deluxe Koutoubia Room (Twin)",
-      "reserved": ["2024/10/03"],
+      "reserved": [
+        "2024/10/03"
+      ],
       "inService": [],
       "guests": [
         {
@@ -174,7 +242,9 @@
           "email_address": "narimanhafari88@gmail.com",
           "adult": 1,
           "children": 0,
-          "reserved": ["2024/10/01"],
+          "reserved": [
+            "2024/10/01"
+          ],
           "country": "Åland Islands"
         },
         {
@@ -184,7 +254,9 @@
           "email_address": "narimanhafari88@gmail.com",
           "adult": 1,
           "children": 0,
-          "reserved": ["2024/10/01"],
+          "reserved": [
+            "2024/10/01"
+          ],
           "country": "Åland Islands"
         },
         {
@@ -194,7 +266,9 @@
           "email_address": "narimanhafari88@gmail.com",
           "adult": 1,
           "children": 0,
-          "reserved": ["2024/10/03"],
+          "reserved": [
+            "2024/10/03"
+          ],
           "country": "Åland Islands"
         }
       ],
@@ -371,7 +445,9 @@
       "guests": [],
       "price": 1980,
       "Sleeps": 3,
-      "img": ["/image/rooms/Park Suite/Park_Suite_P.jpg"],
+      "img": [
+        "/image/rooms/Park Suite/Park_Suite_P.jpg"
+      ],
       "amenities": [
         "Bathrobe",
         "Alarm Clock",
@@ -671,7 +747,10 @@
     },
     {
       "name": "Marqueterie Suite",
-      "reserved": ["2024/10/17", "2024/10/18"],
+      "reserved": [
+        "2024/10/17",
+        "2024/10/18"
+      ],
       "inService": [],
       "guests": [],
       "price": 7040,
