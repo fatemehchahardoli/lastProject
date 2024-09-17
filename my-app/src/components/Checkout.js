@@ -241,41 +241,49 @@ const Checkout = () => {
 
    const Book = () => {
       if (!Rooms || !dataCookies) {
-         console.error("Rooms or dataCookies is not defined");
-         return;
+        console.error("Rooms or dataCookies is not defined");
+        return;
       }
-
+    
+      // آپدیت اتاق‌ها
       const updatedRooms = Rooms.map((room) => {
-         
-         const matchingBook = dataCookies.find((book) => book.id === room.id);
-
-         if (matchingBook) {
-            console.log("Matching book found for room", room.id);
-
-            // به‌روزرسانی مهمانان و رزروها
-            const newGuests = [...room.guests, matchingBook.data];
-            const newReserved = [...room.reserved, matchingBook.data.reserved];
-
-            // بازگرداندن اتاق به‌روزرسانی شده
-            return { ...room, guests: newGuests, reserved: newReserved };
-         }
-
-         // بازگرداندن اتاق بدون تغییر
-         return room;
+        const matchingBook = dataCookies.find((book) => book.id === room.id);
+        if (matchingBook) {
+          console.log("Matching book found for room", room.id);
+    
+          const newGuests = [...room.guests, matchingBook.data];
+          const newReserved = [...room.reserved, matchingBook.data.reserved];
+    
+          return { ...room, guests: newGuests, reserved: newReserved };
+        }
+        return room;
       });
-
+    
       console.log("Updated Rooms: ", updatedRooms);
-
-      // ذخیره اتاق‌های به‌روز شده
-      setSelectedRoom(updatedRooms);
-
-      if (!isLoadingUpdateRoom) {
-         console.log("Update completed, notifying user...");
-         setIsSectionChanged(true);
-         setIsSuccess(false);
-         notify();
-      }
-   };
+    
+      // همزمانی آپدیت اتاق‌ها
+      Promise.all(
+        updatedRooms.map((room) =>
+          updateRoom({ url: "Rooms", id: room.id, room })
+        )
+      )
+        .then((responses) => {
+          console.log("All rooms updated successfully:", responses);
+    
+          cookies.remove("Expiration_Minutes");
+          cookies.remove("firstEnter");
+          setShowTimer(false);
+    
+          // اعلام اتمام به‌روزرسانی
+          setIsSectionChanged(true);
+          setIsSuccess(false);
+          notify();
+        })
+        .catch((error) => {
+          console.error("Error updating rooms:", error);
+        });
+    };
+    
 
    const notify = () =>
       toast.success("success", {
